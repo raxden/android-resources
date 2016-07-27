@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="width_size_100">100dp</dimen>
+
+    <dimen name="width_percent_10">32dp</dimen>
+    <dimen name="width_percent_20">64dp</dimen>
+    <dimen name="width_percent_30">96dp</dimen>
+    <dimen name="width_percent_40">128dp</dimen>
+    <dimen name="width_percent_50">160dp</dimen>
+    <dimen name="width_percent_60">192dp</dimen>
+    <dimen name="width_percent_70">224dp</dimen>
+    <dimen name="width_percent_80">256dp</dimen>
+    <dimen name="width_percent_90">288dp</dimen>
+    <dimen name="width_percent_100">320dp</dimen>
+
+</resources>
