@@ -31,10 +31,4 @@
         <item name="android:layout_weight">1</item>
     </style>
 
-    <style name="ListItem" parent="MatchWidth">
-        <item name="android:layout_height">?android:attr/listPreferredItemHeight</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:orientation">horizontal</item>
-    </style>
-
 </resources>
