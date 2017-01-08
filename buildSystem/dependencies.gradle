@@ -24,7 +24,7 @@ ext {
 
     libraryDependencies = [
             compile    : [
-                    "com.android.support:appcompat-v7:${supportLibraryVersion}",
+                    "com.android.support:appcompat-v7:${supportLibraryVersion}"
             ],
             testCompile: [
                     "junit:junit:${jUnitVersion}",
