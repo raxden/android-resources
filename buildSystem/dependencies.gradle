@@ -4,6 +4,7 @@ ext {
     // ========== VERSIONS =========================================================================
 
     // Android dependencies
+    def appCompatLibraryVersion = '1.0.0'
 
     // Testing
     def junitVersion = '4.12'
@@ -14,6 +15,7 @@ ext {
     // ========== LIBRARIES ========================================================================
 
     def androidLibs = [
+            appCompat: [group: 'androidx.appcompat', name: 'appcompat', version: appCompatLibraryVersion]
     ]
 
     def libs = [
@@ -30,6 +32,7 @@ ext {
     // ========== MODULES DEPENDENCIES =============================================================
 
     libDependencies = [
+            [configuration: "compileOnly", dependency: androidLibs.appCompat],
             [configuration: "testImplementation", dependency: testLibs.junit],
             [configuration: "testImplementation", dependency: testLibs.assertj],
             [configuration: "testImplementation", dependency: testLibs.mockito],
