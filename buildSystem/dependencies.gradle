@@ -1,22 +1,43 @@
 
 ext {
 
+    // ========== VERSIONS =========================================================================
+
+    // Android dependencies
+
     // Testing
-    jUnitVersion = '4.12'
-    assertJVersion = '1.7.0'
-    robolectricVersion = '3.0'
-    mockitoVersion = '1.10.19'
+    def junitVersion = '4.12'
+    def assertJVersion = '1.7.0'
+    def mockitoVersion = '1.10.19'
+    def robolectricVersion = '3.6.1'
 
-    libraryDependencies = [
-            compile    : [
+    // ========== LIBRARIES ========================================================================
 
-            ],
-            testCompile: [
-                    "junit:junit:${jUnitVersion}",
-                    "org.assertj:assertj-core:${assertJVersion}",
-                    "org.mockito:mockito-core:${mockitoVersion}",
-                    "org.robolectric:robolectric:${robolectricVersion}"
-            ]
+    def androidLibs = [
+    ]
+
+    def libs = [
+    ]
+
+    def testLibs = [
+            junit: [group: 'junit', name: 'junit', version: junitVersion],
+            assertj: [group: 'org.assertj', name: 'assertj-core', version: assertJVersion],
+            mockito: [group: 'org.mockito', name: 'mockito-core', version: mockitoVersion],
+            robolectric: [group: 'org.robolectric', name: 'robolectric', version: robolectricVersion],
+            robolectricShadowsMultidex: [group: 'org.robolectric', name: 'shadows-multidex', version: robolectricVersion]
+    ]
+
+    // ========== MODULES DEPENDENCIES =============================================================
+
+    libDependencies = [
+            [configuration: "testImplementation", dependency: testLibs.junit],
+            [configuration: "testImplementation", dependency: testLibs.assertj],
+            [configuration: "testImplementation", dependency: testLibs.mockito],
+            [configuration: "testImplementation", dependency: testLibs.robolectric],
+            [configuration: "testImplementation", dependency: testLibs.robolectricShadowsMultidex]
+    ]
+
+    appDependencies = [
     ]
 
 }
